@@ -260,7 +260,7 @@ if st.button("学習して評価", type="primary"):
     st.code(cr, language="text")
 
     # 解釈可能性
-    st.subheader("🧭 Model Interpretability")
+    st.subheader("🧭 解釈可能性")
     try:
         if clf_name == "ランダムフォレスト":
             final = clf.named_steps["clf"]
@@ -269,7 +269,7 @@ if st.button("学習して評価", type="primary"):
             st.dataframe(imp_df, use_container_width=True)
             fig2, ax2 = plt.subplots(figsize=(6, min(0.35*len(chosen_feats)+1, 10)))
             ax2.barh(imp_df["feature"][::-1], imp_df["importance"][::-1])
-            ax2.set_title("特徴量重要度（ランダムフォレスト）")
+            ax2.set_title("Feature Importance (Random Forest)")
             st.pyplot(fig2)
 
         elif clf_name in ["線形SVM", "ロジスティック回帰"]:
@@ -301,5 +301,6 @@ if st.button("学習して評価", type="primary"):
 
 st.divider()
 st.caption("ヒント：あるクラスのテストサンプルが 0 になる場合、テスト割合を小さくするか、クラスを統合してください。")
+
 
 
