@@ -260,7 +260,7 @@ if st.button("学習して評価", type="primary"):
     st.code(cr, language="text")
 
     # 解釈可能性
-    st.subheader("🧭 解釈可能性")
+    st.subheader("🧭 Model Interpretability")
     try:
         if clf_name == "ランダムフォレスト":
             final = clf.named_steps["clf"]
@@ -301,4 +301,5 @@ if st.button("学習して評価", type="primary"):
 
 st.divider()
 st.caption("ヒント：あるクラスのテストサンプルが 0 になる場合、テスト割合を小さくするか、クラスを統合してください。")
+
 
