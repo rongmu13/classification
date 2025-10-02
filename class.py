@@ -243,11 +243,11 @@ if st.button("学習して評価", type="primary"):
     ax.set(
         xticks=np.arange(num_classes_int),
         yticks=np.arange(num_classes_int),
-        xticklabels=[f"予測 {i}" for i in range(num_classes_int)],
-        yticklabels=[f"実 {i}" for i in range(num_classes_int)],
-        ylabel="実ラベル",
-        xlabel="予測ラベル",
-        title="混同行列"
+        xticklabels=[f"Pred {i}" for i in range(num_classes_int)],
+        yticklabels=[f"True {i}" for i in range(num_classes_int)],
+        ylabel="True label",
+        xlabel="Predicted label",
+        title="Confusion Matrix"
     )
     for i in range(num_classes_int):
         for j in range(num_classes_int):
@@ -301,3 +301,4 @@ if st.button("学習して評価", type="primary"):
 
 st.divider()
 st.caption("ヒント：あるクラスのテストサンプルが 0 になる場合、テスト割合を小さくするか、クラスを統合してください。")
+
