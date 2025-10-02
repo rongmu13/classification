@@ -20,8 +20,8 @@ from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 
 
-st.set_page_config(page_title="🧪 表形式データ分類アプリ（Excel）", layout="wide")
-st.title("🧪 表形式データ分類アプリ（Excel）")
+st.set_page_config(page_title="🧪 簡易分類アプリ（Excel用）Shinshu Univ. R.Y.", layout="wide")
+st.title("🧪 簡易分類アプリ（Excel用）Shinshu Univ. R.Y.")
 
 st.markdown("""
 **使い方**  
@@ -301,6 +301,7 @@ if st.button("学習して評価", type="primary"):
 
 st.divider()
 st.caption("ヒント：あるクラスのテストサンプルが 0 になる場合、テスト割合を小さくするか、クラスを統合してください。")
+
 
 
 
