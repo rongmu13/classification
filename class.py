@@ -286,7 +286,7 @@ if st.button("学習して評価", type="primary"):
                     st.dataframe(coef_df, use_container_width=True)
                     fig3, ax3 = plt.subplots(figsize=(6, min(0.35*len(chosen_feats)+1, 10)))
                     ax3.barh(coef_df["feature"][::-1], coef_df["coef"][::-1])
-                    ax3.set_title("線形モデルの係数")
+                    ax3.set_title("Linear Model Coefficients")
                     st.pyplot(fig3)
                 else:
                     st.caption("多クラスの係数は one-vs-rest の行列です（表で確認できます）。")
@@ -301,6 +301,7 @@ if st.button("学習して評価", type="primary"):
 
 st.divider()
 st.caption("ヒント：あるクラスのテストサンプルが 0 になる場合、テスト割合を小さくするか、クラスを統合してください。")
+
 
 
 
